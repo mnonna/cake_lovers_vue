@@ -142,6 +142,9 @@
             ></b-form-textarea>
           </div>
         </div>
+        <button class="cl-contact__form--submit">
+          <span>Leave message</span>
+        </button>
       </b-form>
     </div>
   </div>
@@ -184,11 +187,11 @@
         }
         &:before {
           position: absolute;
-          top: -2.5px;
+          top: -5px;
           left: -10px;
           content: "";
           height: calc(100% + 10px);
-          width: calc(40% + 10px);
+          width: calc(35% + 10px);
           background-color: white;
           border-radius: 0 15px 15px 0;
           z-index: -1;
@@ -220,18 +223,18 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    @media screen and (min-width: 1367px){
+    @media screen and (min-width: 1367px) {
       flex-direction: row;
       justify-content: center;
     }
-    svg{
+    svg {
       margin-bottom: 50px;
       width: 260px;
       height: auto;
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         width: 350px;
       }
-      @media screen and (min-width: 1367px){
+      @media screen and (min-width: 1367px) {
         width: 500px;
         margin: 0;
       }
@@ -242,7 +245,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      @media screen and (min-width: 1367px){
+      @media screen and (min-width: 1367px) {
         width: 500px;
         margin-left: 200px;
       }
@@ -253,7 +256,7 @@
       flex-direction: column;
       align-items: center;
       margin: 40px 0 0 0;
-      &:nth-of-type(1){
+      &:nth-of-type(1) {
         margin: 0;
       }
       label {
@@ -262,7 +265,10 @@
       &--wrapper {
         position: relative;
         width: 70%;
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 768px) {
+          width: 50%;
+        }
+        @media screen and (min-width: 1367px) {
           width: 100%;
         }
         &.focused {
@@ -290,11 +296,55 @@
             background-color: $base-theme-color;
           }
         }
-        textarea{
+        textarea {
           resize: none;
         }
-        input{
+        input {
           height: 60px;
+        }
+      }
+    }
+    &--submit {
+      margin-top: 50px;
+      position: relative;
+      width: 200px;
+      height: 50px;
+      margin-bottom: 40px;
+      color: white;
+      outline: 0;
+      z-index: 1000;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+      }
+      &::after {
+        transform: translate(-10px, 10px);
+        background-color: white;
+        z-index: -2;
+      }
+      &::before {
+        z-index: -1;
+        background-color: $base-theme-color;
+      }
+      &:hover {
+        &::after {
+          background-color: $base-theme-color;
+          transform: translate(0px, 0px);
+        }
+        &::before {
+          background-color: black;
+          transform: translate(0px, 0px);
         }
       }
     }

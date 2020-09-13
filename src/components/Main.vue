@@ -12,9 +12,11 @@
           However we're not casual confectioners.
           Everyone is an artist making piece of art.
         </p>
-        <button class="cl-hero-section__button" type="button">
-          <span>Check out more</span>
-        </button>
+        <a href="#crafts">
+          <button class="cl-hero-section__button" type="button">
+            <span>Check out more</span>
+          </button>
+        </a>
       </div>
       <div class="cl-hero-section__cake">
         <svg
@@ -399,7 +401,7 @@
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 100px;
     width: 100%;
     @media screen and (min-width: 1024px) {
       justify-items: end;
@@ -432,7 +434,7 @@
       z-index: 1000;
       &::before {
         position: absolute;
-        top: -2.5px;
+        top: -5px;
         left: 0;
         content: "";
         height: calc(100% + 10px);

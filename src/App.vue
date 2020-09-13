@@ -5,6 +5,7 @@
     <Crafts />
     <Cakes />
     <Contact />
+    <Location />
     <Footer v-if="!mobile"/>
     <MobileNav v-if="mobile" />
   </div>
@@ -16,6 +17,7 @@ const Navbar = () => import("./components/menu/Navbar");
 const Crafts = () => import("./components/Crafts");
 const Cakes = () => import("./components/Cakes");
 const Contact = () => import("./components/Contact");
+const Location = () => import("./components/Location");
 const MobileNav = () => import("./components/menu/NavbarMobile");
 const Footer = () => import("./components/Footer");
 export default {
@@ -26,6 +28,7 @@ export default {
     Crafts,
     Cakes,
     Contact,
+    Location,
     Footer,
     MobileNav
   },
@@ -51,7 +54,7 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
 body,
 html {
@@ -65,7 +68,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 p,

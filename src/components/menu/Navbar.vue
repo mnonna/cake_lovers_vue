@@ -91,9 +91,9 @@
   &__wrapper {
     width: 100%;
     justify-content: center;
-    @media screen and (min-width: 1367px) {
+    @media screen and (min-width: 768px) {
       justify-content: space-between;
-      width: 70%;
+      width: 80%;
     }
   }
   &__brand {
