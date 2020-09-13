@@ -118,8 +118,8 @@
       </svg>
     </div>
     <div class="cl-location__main">
-      <div class="mapouter">
-        <div class="cl-location__map gmap_canvas">
+      <div class="cl-location__map--main mapouter">
+        <div class="cl-location__map--wrapper gmap_canvas">
           <iframe
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=Sportowa%2026A%2C%2062-130%20Go%C5%82a%C5%84cz&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -207,7 +207,7 @@
     }
     h1 {
       font-size: 30px;
-      color: $base-theme-color;
+      color: white;
       @media screen and (min-width: 768px) {
         font-size: 40px;
       }
@@ -242,21 +242,29 @@
     }
   }
   &__map{
+    &--main{
       margin-bottom: 50px;
-      iframe{
-        width: 100%;
-        height: 400px;
-        @media screen and (min-width: 768px){
-            height: 500px;
-        }
-        @media screen and (min-width: 1367px){
-            width: 600px;
-            height: 500px;
-        }
-      }
+      width: 90%;
+      height: 400px;
       @media screen and (min-width: 768px){
-          margin: 0;
+        height: 500px;
+        width: 70%;
       }
+      @media screen and (min-width: 1367px){
+        margin: 0;
+        width: 600px;
+        height: 500px;
+      }
+    }
+    &--wrapper{
+      width: 100%;
+      height: 100%;
+      iframe{
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   &__contact{
       width: 300px;

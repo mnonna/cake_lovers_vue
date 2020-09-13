@@ -95,6 +95,8 @@ export default {
   mounted() {
     new swiper(".swiper-container", {
       effect: "coverflow",
+      autoplay: true,
+      speed: 1000,
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
@@ -102,7 +104,7 @@ export default {
         rotate: 50,
         stretch: 0,
         depth: 100,
-        modifier: 1,
+        modifier: 1.2,
         slideShadows: true
       },
       pagination: {
