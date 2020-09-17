@@ -1,4 +1,7 @@
-# cake_lovers_landing
+# Cake Lovers Landing Page
+
+Live site: 
+https://cakelovers.herokuapp.com/
 
 ## Project setup
 ```
